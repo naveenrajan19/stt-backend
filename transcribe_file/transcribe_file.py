@@ -46,12 +46,18 @@ def call_stt_api(encoding, sample_rate, gcs_uri):
         {"phrases": ["essence of Argan"]}
     ]
 
+    # Diarization checks for multiple speakers (like on a phone call)
+    diarization_config = speech.SpeakerDiarizationConfig(
+        enable_speaker_diarization=True,
+        min_speaker_count=1,
+        max_speaker_count=2,
+    )
 
 
     # FUTURE IMPROVEMENT: take some of the options out of the function, like language_code, 
     # speaker diarization (diarization_config), model, etc. and make configurable in a user interface
     config_object = speech.RecognitionConfig(
-        # diarization_config=diarization_config  # check if there is more than one speaker
+        diarization_config=diarization_config,  # check if there is more than one speaker
         sample_rate_hertz=sample_rate,
         encoding=encoding,
         enable_automatic_punctuation=True,
