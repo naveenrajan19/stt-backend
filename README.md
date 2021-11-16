@@ -46,4 +46,4 @@ This function is triggered when the speech to text API response is published to 
 6. get_transcript_by_file_uuid.js
 
 
-This function is the final step of the process. It is called by the client. The UUID for the file (returned by the first function) is used to query Firestore for the transcript that was inserted in the previous step. The function checks Firestore every 2 seconds for a total of about 150 seconds. The transcription string will be displayed in the front end under "Transcript of File"
+This function is the final step of the process. It is called by the client. The UUID for the file (returned by the first function) is used to query Firestore for the transcript that was inserted in the previous step. The function checks Firestore every 2 seconds for a total of about 5 minutes. The transcription string will be displayed in the front end under "Transcript of File"
