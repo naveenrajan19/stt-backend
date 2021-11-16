@@ -1,0 +1,8 @@
+{
+    "name": "get-transcript",
+    "version": "0.0.1",
+    "dependencies": {
+    "@google-cloud/firestore": "^4.15.1",
+    "cors": "^2.8.5"
+    }
+  }
