@@ -1,5 +1,5 @@
 # stt-backend
-
+High level overview: https://docs.google.com/drawings/d/1jD0y4_IbwZyf5_NMfiVBwi3UxxqSdw-ivDYGYBh_tow/edit?usp=sharing
 
 1. upload_audio_file_to_gcs.js
 
